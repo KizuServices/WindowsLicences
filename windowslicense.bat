@@ -1,7 +1,7 @@
 :: activate windows v1.0 By ottersec
 
 @echo off
-title ottersecdows v1.0
+title KizuServices
 mode 100,20
 set kms=kms.digiboy.ir
 net session >nul
@@ -32,7 +32,7 @@ exit /B
 
 :Detect
 for /f "tokens=3 delims= " %%i in ('reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "EditionID"') do set VWin=%%i
-call :Banner2 "Ottersec is detecting your version of Windows.."
+call :Banner2 "KizuServices is detecting your version of Windows.."
 timeout 2 >nul 2>&1
 ver | find "10.0." >nul && goto Win10 
 
@@ -65,6 +65,6 @@ cscript //Nologo %windir%\system32\slmgr.vbs /ipk %~1 >nul
 cscript //Nologo %windir%\system32\slmgr.vbs /skms %kms% >nul
 cscript //Nologo %windir%\system32\slmgr.vbs /ato >nul
 color 2
-call :Banner "          ottersec activated your windows correctly"
+call :Banner "          Kizu Services activated your windows correctly"
 pause >nul
 exit
